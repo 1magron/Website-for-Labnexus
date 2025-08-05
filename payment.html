@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register & Pay | LabNexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4caf50;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, select {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button, .pricing-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    button:hover, .pricing-button:hover {
+      background-color: #43a047;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .pricing-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      background: #222;
+      color: #aaa;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Register & Pay</h1>
+  </header>
+
+  <main>
+    <section class="pricing-section">
+      <h2>View Our Plans</h2>
+      <a href="#mockPaymentForm" class="pricing-button">Select a Plan</a>
+    </section>
+
+    <h2>Get Access to LabNexus AI</h2>
+    <form id="mockPaymentForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <select required>
+        <option value="" disabled selected>Select Plan</option>
+        <option value="monthly">Monthly - ₹500</option>
+        <option value="yearly">Yearly - ₹5000</option>
+        <option value="school">School/NGO Bulk Plan</option>
+      </select>
+      <input type="text" placeholder="Card Number (mock)">
+      <input type="text" placeholder="Expiry Date (MM/YY)">
+      <input type="text" placeholder="CVV">
+      <button type="submit">Proceed to Pay</button>
+    </form>
+    <p class="note">This is a prototype page. No real payment will be processed.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 LabNexus AI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
