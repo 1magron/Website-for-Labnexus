@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LabNexus AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Dropdown Navigation */
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+      min-width: 150px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    nav ul li .dropdown a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav ul li .dropdown a:hover {
+      background-color: #f4f4f4;
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav>
+      <h1>LabNexus AI</h1>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li>
+          <a href="product.html">Product ▾</a>
+          <div class="dropdown">
+            <a href="#walkthrough">How it Works</a>
+            <a href="#preview">AR Preview</a>
+            <a href="#contact">Partnership</a>
+          </div>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+	<li><a href="payment.html">Register & Pay</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <h2>Science Lab in Your Pocket</h2>
+    <p>LabNexus AI brings immersive, AR-powered science experiments to every student — no lab needed.</p>
+    <img src="media/lab-simulation.gif" alt="Lab Simulation" class="hero-img">
+  </section>
+
+  <section id="features" class="slide-in">
+    <h2>Features</h2>
+    <div class="features-list">
+      <div>
+        <h3>🔬 AR Experiments</h3>
+        <p>Realistic simulations for Chemistry, Physics, and Biology using your phone.</p>
+      </div>
+      <div>
+        <h3>🧠 AI Feedback</h3>
+        <p>Smart feedback, safety tips, and instant scoring during experiments.</p>
+      </div>
+      <div>
+        <h3>📱 Offline & Low-Cost</h3>
+        <p>Runs on low-end phones with optional AR kits for rural schools.</p>
+      </div>
+      <div>
+        <h3>👩‍🏫 Teacher Dashboard</h3>
+        <p>Track performance, manage labs, and auto-generate reports.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="walkthrough" class="fade-in">
+    <h2>Product Walkthrough</h2>
+    <video controls style="width:100%; max-width:800px; border-radius:12px; display:block; margin: 0 auto;">
+      <source src="media/walkthrough.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="preview" class="fade-in">
+  <h2>AR Experience Preview</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+    <img src="media/ar-sample-1.jpg" alt="AR Sample 1" style="width: 250px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <img src="media/ar-sample-2.jpg" alt="AR Sample 2" style="width: 250px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <img src="media/ar-sample-3.jpg" alt="AR Sample 3" style="width: 250px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </div>
+</section>
+
+
+<section id="pricing" class="fade-in">
+  <h2>Pricing</h2>
+  <p style="text-align: center; max-width: 600px; margin: 0 auto 1.5rem;">
+    Get access to all LabNexus AI features, experiment kits, and smart feedback tools — starting at just ₹500/month.
+  </p>
+  <div style="text-align: center;">
+    <a href="payment.html">
+      <button style="
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      " onmouseover="this.style.backgroundColor='#43a047'" onmouseout="this.style.backgroundColor='#4caf50'">
+        Select a Plan & Register
+      </button>
+    </a>
+  </div>
+</section>
+
+  <section id="contact" class="slide-in">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 LabNexus AI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader");
+      if (loader) loader.style.display = "none";
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
